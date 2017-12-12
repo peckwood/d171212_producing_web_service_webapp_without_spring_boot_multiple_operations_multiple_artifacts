@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ouhaogroup.com/response"
+	xmlns:tns="http://www.ouhaogroup.com/response"
+	elementFormDefault="qualified">
+	<element name="response" >
+		<complexType>
+		<sequence>
+			<element name="status" type="tns:statusType"></element>
+			<element name="msg" type="string"></element>
+		</sequence>
+	</complexType>
+	</element>
+	
+	<simpleType name="statusType">
+		<restriction base="string">
+			<enumeration value="SUCCESS"></enumeration>
+			<enumeration value="ERROR"></enumeration>		
+		</restriction>
+	</simpleType>
+</schema>
