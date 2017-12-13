@@ -1,8 +1,20 @@
+## Producing a SOAP web service without Spring Boot
+
+d171212_producing_web_service_webapp_without_spring_boot_multiple_operations_multiple_artifacts
+
+
+
 Note this project is not inheriting from Spring Boot but still uses `spring-boot-starter-web-services` as dependency
 
 My web.xml over `WebApplicationInitializer` version is not working, so web.xml is commented out.
 
 This project works with client: `d171211_consuming_web_service`
+
+### Features
+
+- Not inheriting from Spring Boot
+- Spring Web Service or Spring WS
+- Developed based on a Maven webapp project 
 
 ### Configurations
 
@@ -29,6 +41,8 @@ This project works with client: `d171211_consuming_web_service`
 
 - I used org.codehaus.mojo.jaxb2-maven-plugin plugin, only uncomment the goal tag when you need to generating java classes, or it will generate java classes inside target folder and report errors
 - Use mvn clean package to generate, the whole process will fail if there are already generated classes in main, that is fine, as the generation should complete successfully
-- If the plugin reports some error like `Invocation failed`, it is probablly because it cannot acess the wsdl
+- If the plugin reports some error like `Invocation failed`, it is probablly because it cannot access the wsdl
 
 > [followed this concretepage guide](https://www.concretepage.com/spring-4/spring-4-soap-web-service-producer-consumer-example-with-tomcat#download)
+>
+> see also the other project [d171202-producting-web-service-spring-boot-soap-wsdl](https://github.com/peckwood/d171202-producting-web-service-spring-boot-soap-wsdl)
